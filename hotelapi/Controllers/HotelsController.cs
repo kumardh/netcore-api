@@ -7,35 +7,38 @@ using Microsoft.AspNetCore.Mvc;
 namespace hotelapi.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class HotelsController : Controller
     {
-        // GET api/values
+        // GET api/hotels
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            using (var db = new HotelContext())
+            {
+                return Ok(db.Hotels.ToList());
+            }            
         }
 
-        // GET api/values/5
+        // GET api/hotels/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST api/hotels
         [HttpPost]
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT api/hotels/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/hotels/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
