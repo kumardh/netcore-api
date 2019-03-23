@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hotelapi", "hotelapi\hotelapi.csproj", "{74C69574-1EF6-4DA4-B1BC-64383A243B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InProcess", "InProcess\InProcess.csproj", "{C70EAAA5-36A3-4A2E-B6C1-90D822BA58EF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutOfProcess", "OutOfProcess\OutOfProcess.csproj", "{D0CE3375-0D7D-4EA2-A307-3A417191F069}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{74C69574-1EF6-4DA4-B1BC-64383A243B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C69574-1EF6-4DA4-B1BC-64383A243B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C69574-1EF6-4DA4-B1BC-64383A243B2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C70EAAA5-36A3-4A2E-B6C1-90D822BA58EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C70EAAA5-36A3-4A2E-B6C1-90D822BA58EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C70EAAA5-36A3-4A2E-B6C1-90D822BA58EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C70EAAA5-36A3-4A2E-B6C1-90D822BA58EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0CE3375-0D7D-4EA2-A307-3A417191F069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0CE3375-0D7D-4EA2-A307-3A417191F069}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0CE3375-0D7D-4EA2-A307-3A417191F069}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0CE3375-0D7D-4EA2-A307-3A417191F069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
