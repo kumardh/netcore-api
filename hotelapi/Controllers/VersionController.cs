@@ -19,7 +19,7 @@ namespace hotelapi.Controllers
     public class AppInfo
     {
         public string Application => "hotelapi";
-        public string Version => "1.0.0";
+        public string Version => "2.0.0";
         public string Hosting => "InProcess";
         public string ProcessName => System.Diagnostics.Process.GetCurrentProcess().ProcessName;
     }
