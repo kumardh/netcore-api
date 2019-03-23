@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:42596/",
+      "applicationUrl": "http://localhost:50597/",
       "sslPort": 0
     }
   },
@@ -11,20 +11,19 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/version",
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "ancmHostingModel": "InProcess"
+      }
     },
-    "hotelapi": {
+    "WebApplication1": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/version",
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:42595/"
+      "applicationUrl": "http://localhost:50598/"
     }
   }
 }

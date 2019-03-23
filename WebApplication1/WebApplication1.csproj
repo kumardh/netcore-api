@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <UserSecretsId>58472b6a-1a58-4d54-a270-e09c004d77b5</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
@@ -11,8 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
   </ItemGroup>
 
   <ItemGroup>

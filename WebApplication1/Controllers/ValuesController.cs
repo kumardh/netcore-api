@@ -4,41 +4,38 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace hotelapi.Controllers
+namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
-    public class HotelsController : ControllerBase
+    public class ValuesController : Controller
     {
-        // GET api/hotels
+        // GET api/values
         [HttpGet]
-        public ActionResult Get()
+        public IEnumerable<string> Get()
         {
-            using (var db = new HotelContext())
-            {
-                return Ok(db.Hotels.ToList());
-            }            
+            return new string[] { "value1", "value2" };
         }
 
-        // GET api/hotels/5
+        // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/hotels
+        // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/hotels/5
+        // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/hotels/5
+        // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
