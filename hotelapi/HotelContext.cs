@@ -7,10 +7,14 @@ namespace hotelapi
     {
         public DbSet<Hotel> Hotels { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=tcp:dkss.database.windows.net,1433;Initial Catalog=hmsdb;Persist Security Info=False;User ID=Dhananjay;Password=Manav2011;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        }
+        public HotelContext(DbContextOptions<HotelContext> options) : base(options)
+        { }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=tcp:dkss.database.windows.net,1433;Initial Catalog=hmsdb;Persist Security Info=False;User ID=Dhananjay;Password=Manav2011;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        //    optionsBuilder.UseSqlServer(@"Data Source=DKUMAR04\\SQL2016;Initial Catalog=hmsdb;Integrated Security=True;");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

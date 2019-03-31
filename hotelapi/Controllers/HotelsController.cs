@@ -9,14 +9,16 @@ namespace hotelapi.Controllers
     [Route("api/[controller]")]
     public class HotelsController : ControllerBase
     {
+        private HotelContext hotelContext;
+        public HotelsController(HotelContext hotelContext)
+        {
+            this.hotelContext = hotelContext;
+        }
         // GET api/hotels
         [HttpGet]
         public ActionResult Get()
         {
-            using (var db = new HotelContext())
-            {
-                return Ok(db.Hotels.ToList());
-            }            
+            return Ok(hotelContext.Hotels.ToList());
         }
 
         // GET api/hotels/5
