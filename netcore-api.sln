@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hotelapi", "hotelapi\hotelapi.csproj", "{74C69574-1EF6-4DA4-B1BC-64383A243B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netcore-api", "netcore-api\netcore-api.csproj", "{74C69574-1EF6-4DA4-B1BC-64383A243B2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BABDCFC8-90D4-4AB1-A79C-4E4CA87B981F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hotelapi.UnitTests", "hotelapi.UnitTests\hotelapi.UnitTests.csproj", "{0F7F3222-D583-4FD7-B263-1B2089C97D9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netcore-api.UnitTests", "netcore-api.UnitTests\netcore-api.UnitTests.csproj", "{0F7F3222-D583-4FD7-B263-1B2089C97D9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
