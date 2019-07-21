@@ -42,6 +42,7 @@ namespace WebApi
             }
 
             // Add below middleware if you want to expose static content from App. Once add you can access img.jpg inside images folder.
+            // Code Path: https://github.com/aspnet/StaticFiles/blob/master/src/Microsoft.AspNetCore.StaticFiles/StaticFileMiddleware.cs
             app.UseStaticFiles();
 
             // Below is middle to handle exception globally.
