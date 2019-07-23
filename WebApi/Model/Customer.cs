@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApi.Model
 {
@@ -8,6 +9,7 @@ namespace WebApi.Model
 
         public string Name { get; set; }
 
+        [NotMapped]
         public int Age { get; set; }
 
         public IList<Order> Orders { get; set; }
