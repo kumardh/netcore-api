@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
-using System;
-using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 using System.IO;
 using System.Net.Http;
-using System.Text;
-using Microsoft.Extensions.Configuration;
 
-namespace webApi.Tests
+namespace WebApi.Tests
 {
     public class TestClientProvider
     {

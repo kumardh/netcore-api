@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using webApi.Model;
-using Microsoft.EntityFrameworkCore;
-using WebApi.Model;
-using WebApi;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Linq;
+using System.Text;
+using WebApi.Model;
 
-namespace webApi
+namespace WebApi
 {
     public class Startup
     {
@@ -66,8 +59,6 @@ namespace webApi
 
             // Add DbContext for SQL Server operation.
             services.AddDbContext<OrderProcessingDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("OrderDatabase")));
-
-            services.AddDbContext<HotelContext>(o => o.UseSqlServer(Configuration.GetConnectionString("HotelDatabase")));
 
             // Add serices for MongoDb operation.
             services.Configure<BookstoreDatabaseSettings>(Configuration.GetSection(nameof(BookstoreDatabaseSettings)));

@@ -1,22 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
+﻿using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace webApi.Tests
+namespace WebApi.Tests
 {
     public class ValuesControllerTests
     {
+        public ValuesControllerTests()
+        {
+        }
+
         [Fact]
         public async Task ValuesController_GetAll()
         {
+            // Arrange
             var client = new TestClientProvider().Client;
             var response = await client.GetAsync("/api/values");
-            var x = await response.Content.ReadAsStringAsync();
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
+            // Act
+            var result = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal("[\"value1\",\"value2\"]", result);            
+        }
+
+        [Fact]
+        public async Task ValuesController_GetValueById()
+        {
+            // Arrange
+            var client = new TestClientProvider().Client;
+            var response = await client.GetAsync("/api/values/5");
+
+            // Act
+            var result = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal("value", result);
         }
     }
 }

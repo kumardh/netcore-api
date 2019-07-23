@@ -1,16 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace webApi.Model
+namespace WebApi.Model
 {
     public class OrderProcessingDbContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Product> Products { get; set; }
 
         public OrderProcessingDbContext(DbContextOptions<OrderProcessingDbContext> options)
             : base(options)
@@ -26,6 +24,9 @@ namespace webApi.Model
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Customer)
                 .WithMany(o => o.Orders);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.Products);
         }
     }
 }

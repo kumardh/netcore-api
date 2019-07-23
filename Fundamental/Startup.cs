@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Net;
 
-namespace WebApi
+namespace Fundamental
 {
     public class Startup
     {
