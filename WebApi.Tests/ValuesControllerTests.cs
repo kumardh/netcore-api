@@ -6,10 +6,6 @@ namespace WebApi.Tests
 {
     public class ValuesControllerTests
     {
-        public ValuesControllerTests()
-        {
-        }
-
         [Fact]
         public async Task ValuesController_GetAll()
         {
