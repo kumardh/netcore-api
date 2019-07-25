@@ -18,7 +18,7 @@ namespace WebApi.Tests
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            Assert.Equal("[\"value1\",\"value2\"]", result);            
+            Assert.Equal("[\"value1\",\"value3\"]", result);            
         }
 
         [Fact]

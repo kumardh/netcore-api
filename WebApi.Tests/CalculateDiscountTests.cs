@@ -13,11 +13,11 @@ namespace WebApi.Tests
         public void CalculateDiscount_Test1()
         {
             // Arrange
-            var order = new Order()
-            {
-                Customer = new Customer() { Age = 10 },
-                Products = Enumerable.Empty<Product>()
-            };
+            //var order = new Order()
+            //{
+            //    Customer = new Customer() { Age = 10 },
+            //    Products = Enumerable.Empty<Product>()
+            //};
 
             // Act
             var discount = CalculateDiscount.GetDiscount(9,5);
